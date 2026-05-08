@@ -1,4 +1,4 @@
-# LaTeX class for University of Helsinki disseerations
+# LaTeX class for University of Helsinki dissertations
 
 ## Usage
 
