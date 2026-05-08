@@ -2,6 +2,9 @@
 
 ## Usage
 
+Copy the file *dissunihel.cls* somewhere where your TeX installation can find it, 
+e.g. your current working directory.
+
 ```latex
 \documentclass[<options>]{dissunihel}
 ```
