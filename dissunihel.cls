@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dissunihel}[
-    2026/04/26 Class for Dissertationes Universitatis Helsingiensis
+    2026/05/08 Class for University of Helsinki dissertations
 ]
 
 \DeclareOption{onecolumn}{\PassOptionsToClass{\CurrentOption}{book}}
