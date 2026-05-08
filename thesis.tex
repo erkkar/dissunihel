@@ -1,0 +1,115 @@
+%% thesis.tex
+%% Copyright 2026 Erkka Rinne
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Erkka Rinne
+
+
+\documentclass{dissunihel}
+
+% Top matter
+\pretitle{
+    Department of xxx \\
+    University of Helsinki \\
+    Dissertationes Universitatis Helsingiensis xx/2026
+}
+\title{Title}
+\subtitle{A subtitle}
+\author{P.H.D. Student}
+\date{2026}
+\posttitle{
+    ACADEMIC DISSERTATION\\
+    To be presented, with the permission of the (faculty) 
+    of the University of Helsinki, 
+    for public examination in lecture room X, University main building,\\
+    on the dd of mmm, 2026.
+    
+    Helsinki 2026
+}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\begin{flushleft}
+    % No paragraph indent but space between
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{\baselineskip}
+    
+    \textbf{Pre-examiners} \\[6pt]
+    Professor Firstname Lastname, University \\
+    Professor Emeritus Firstname Lastname, University
+    
+    \textbf{Custos} \\[6pt]
+    Professor Firstname Lastname, University of Helsinki
+    
+    \noindent\textbf{Supervisors} \\[6pt]
+    Dr Firstname Lastname, University\\
+    Senior Scientist Firstname Lastname, University
+    
+    \textbf{Opponent} \\[6pt]
+    Professor Emeritus Firstname Lastname, University
+    
+    \vfill
+    Publisher: University of Helsinki\\
+    Series: Dissertationes Universitatis Helsingiensis xx/20xx
+    %Cover Image: Firstname Lastname \\
+    
+    ISBN XXX-XXXXXXXX (paperback) \\
+    ISBN XXX-XXXXXXXX (PDF) \\
+    ISSN XXXX-XXXX (print) \\
+    ISSN XXXX-XXXX (PDF)
+    
+    Unigrafia / PunaMusta \\
+    Joensuu 2026
+\end{flushleft}
+\newpage
+
+\chapter*{Abstract}\label{ch:abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Abstract...
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+Thanks ....
+
+% List of symbols and table of contents 
+%\printnomenclature
+\tableofcontents
+
+\chapter*{List of original publications}
+\addcontentsline{toc}{chapter}{List of original publications}
+\begin{publications}
+    
+    \item\label{pub:A}
+    \dots
+    
+    \item\label{pub:B} 
+    \dots
+    
+    \item\label{pub:C}
+    \dots
+    
+\end{publications}
+
+
+\mainmatter  % This starts page numbering from 1
+\chapter{Introduction}
+
+Introduction ...
+
+% Uncommment if using BibLaTeX
+%\printbibliography[title=References]
+
+\end{document}
