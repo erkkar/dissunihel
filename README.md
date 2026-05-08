@@ -1,5 +1,7 @@
 # LaTeX class for University of Helsinki dissertations
 
+The class corresponds to [the instructions published by Unigrafia](https://unigrafia.fi/en/services/support-services/dissertations-university-of-helsinki/).
+
 ## Usage
 
 Copy the file *dissunihel.cls* somewhere where your TeX installation can find it, 
