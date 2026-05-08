@@ -17,16 +17,16 @@
 \documentclass{dissunihel}
 
 % Top matter
-\pretitle{
+\pretitle{  % this is optional
     Department of xxx \\
     University of Helsinki \\
     Dissertationes Universitatis Helsingiensis xx/2026
 }
 \title{Title}
-\subtitle{A subtitle}
+\subtitle{An optional subtitle}
 \author{P.H.D. Student}
 \date{2026}
-\posttitle{
+\posttitle{  % this is optional
     ACADEMIC DISSERTATION\\
     To be presented, with the permission of the (faculty) 
     of the University of Helsinki, 
@@ -37,14 +37,11 @@
 }
 
 \begin{document}
-\frontmatter
+\frontmatter  % this starts page numbering from i
 \maketitle
 
-\begin{flushleft}
-    % No paragraph indent but space between
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{\baselineskip}
-    
+% Inside cover info 
+\begin{pubinfo}
     \textbf{Pre-examiners} \\[6pt]
     Professor Firstname Lastname, University \\
     Professor Emeritus Firstname Lastname, University
@@ -71,8 +68,7 @@
     
     Unigrafia / PunaMusta \\
     Joensuu 2026
-\end{flushleft}
-\newpage
+\end{pubinfo}
 
 \chapter*{Abstract}\label{ch:abstract}
 \addcontentsline{toc}{chapter}{Abstract}

@@ -105,6 +105,13 @@
 % Select default font size
 \renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
 
+\newenvironment{pubinfo}{
+        \raggedright
+        % No paragraph indent but space between
+        \setlength{\parindent}{0pt}
+        \setlength{\parskip}{\baselineskip}
+    }{\newpage}
+
 % Environement for the list of publications
 \newenvironment{publications}{
     \begin{enumerate}[label=\Roman*, align=left]
