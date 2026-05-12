@@ -13,8 +13,8 @@ To use the class for your thesis, add the line
 ```
 to the top of your LaTeX source.
 
-Available standard `book` class options are `onecolumn`, `twocolumn`, `oneside`, `twoside`, `draft` and `final`.
+Available standard `book` class options are `onecolumn`, `twocolumn`, `draft` and `final`.
 
-Currently only supports A4 page size which will be reduced in press.
+Currently only supports A4 page size with symmetric margins which will be reduced in press.
 
 See file *thesis.tex* for an example document.

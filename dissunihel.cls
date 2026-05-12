@@ -15,39 +15,40 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dissunihel}[
-    2026/05/08 Class for University of Helsinki dissertations
+    2026/05/12 Class for Dissertationes Universitatis Helsingiensis
 ]
 
+%% Class options
 \DeclareOption{onecolumn}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{twocolumn}{\PassOptionsToClass{\CurrentOption}{book}}
-\DeclareOption{oneside}{\PassOptionsToClass{\CurrentOption}{book}}
-\DeclareOption{twoside}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{draft}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{final}{\PassOptionsToClass{\CurrentOption}{book}}
 
 \ProcessOptions\relax
-\LoadClass[12pt]{book}
+\LoadClass[12pt,oneside]{book}
 
-% Use Times and Helvetica fonts
+%% Use Times and Helvetica fonts
 \RequirePackage{newtxtext}
 \RequirePackage{newtxmath}
 \RequirePackage{helvet}
 \RequirePackage{enumitem}
 \RequirePackage{ifthen}
 
-% Set page size
+%% Set page size and margins
 \RequirePackage[
     paper=a4paper,
     hmargin=2.8cm,
     tmargin=2.5cm
 ]{geometry}
 
+
+%% Title page
+% Custom commands for setting the title page information
 \newcommand{\pretitle}[1]{\gdef\@pretitle{#1}}
 \newcommand{\posttitle}[1]{\gdef\@posttitle{#1}}
 \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
 
-
-% Title page
+%% Custom title page
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
@@ -69,19 +70,29 @@
     \newpage
 }
 
-% Heading formatting
+%% Heading formatting
 \RequirePackage{titlesec}
+
+% chapters
 \titleformat{\chapter}[hang]{\LARGE\sffamily\bfseries}{\thechapter}{0.76cm}{}{}
 \titlespacing*{\chapter}{0pt}{0pt}{100pt}[0pt]
 
+% sections
 \titleformat{\section}[hang]{\Large\sffamily\bfseries}{\thesection}{1.02cm}{}{}
 \titlespacing*{\section}{0pt}{24pt}{12pt}[0pt]
 
+% subsections
 \titleformat{\subsection}[hang]{\large\sffamily\bfseries}{\thesubsection}{1.27cm}{}{}
 \titlespacing*{\subsection}{0pt}{24pt}{12pt}[0pt]
 
 
-% Caption formatting
+%% Hyperlinks	
+\RequirePackage[hidelinks,breaklinks]{hyperref}
+\RequirePackage{url}
+\urlstyle{same}  % Typeset URLs with the same typeface
+
+
+%% Caption formatting
 \RequirePackage{caption}
 \captionsetup{
     labelfont=bf,        % bold label
@@ -94,17 +105,21 @@
     font=small,
 }
 
-% Eq. numbers
-\renewcommand{\theequation}{\arabic{equation}}
+%% Numbering of floats: only running number
+\RequirePackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
 
-% Nomenclatures
+%% Nomenclatures
 \RequirePackage[intoc]{nomencl}
 \renewcommand{\nomname}{List of Symbols}
 \setlength{\nomitemsep}{-\parsep}
 
-% Select default font size
+%% Select default font size
 \renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
 
+%% Custom environment for the inner cover
 \newenvironment{pubinfo}{
         \raggedright
         % No paragraph indent but space between
@@ -112,13 +127,14 @@
         \setlength{\parskip}{\baselineskip}
     }{\newpage}
 
-% Environement for the list of publications
+%% Environement for the list of publications
 \newenvironment{publications}{
     \begin{enumerate}[label=\Roman*, align=left]
 }{
     \end{enumerate}
 }
 
+%% Set default page style
 \AtBeginDocument{
     % Set page style to plain
     \pagestyle{plain}
