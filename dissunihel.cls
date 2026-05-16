@@ -96,9 +96,12 @@
 %% Caption formatting
 \RequirePackage{caption}
 \captionsetup{
-    labelfont=bf,        % bold label
-    font=small,          % small font size
-    format=plain,        % typeset as normal paragraph
+    labelfont={sf,bf},  % sans-serif, bold label
+    font=small,         % small font size
+    format=hang,        % typeset as hanging 
+    labelsep=quad,      % separate label and caption with quad space
+    justification=justified,
+    singlelinecheck=true,  % single-line caption is centered
 }
 \RequirePackage{subcaption} 
 \subcaptionsetup{
