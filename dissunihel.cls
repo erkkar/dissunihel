@@ -143,7 +143,11 @@
 
 %% Environement for the list of publications
 \newenvironment{publications}{
-    \begin{enumerate}[label=\Roman*, align=left]
+    \begin{enumerate}[
+        label=\textbf{\Roman*}, 
+        ref={\Roman*}, 
+        align=left,
+    ]
 }{
     \end{enumerate}
 }
