@@ -37,8 +37,9 @@
 %% Set page size and margins
 \RequirePackage[
     paper=a4paper,
-    hmargin=2.8cm,
-    tmargin=2.5cm
+    hmargin=2.8cm,  % lef tand right margins
+    vmargin=2.5cm,  % top and bottom margins
+    ignorefoot=true,
 ]{geometry}
 
 
