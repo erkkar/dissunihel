@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dissunihel}[
-    2026/05/12 Class for Dissertationes Universitatis Helsingiensis
+    2026/05/16 Class for Univeristy of Helsinki dissertations
 ]
 
 %% Class options
