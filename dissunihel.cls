@@ -31,7 +31,6 @@
 \RequirePackage{newtxtext}
 \RequirePackage{newtxmath}
 \RequirePackage{helvet}
-\RequirePackage{enumitem}
 \RequirePackage{ifthen}
 
 %% Set page size and margins
@@ -123,13 +122,24 @@
 %% Select default font size
 \renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
 
-%% Custom environment for the inner cover
+%% Custom environments for the inner cover
+% Pre-examiners etc.
+\RequirePackage{enumitem}
+\newenvironment{people}{
+    \begin{description}[font=\bfseries, style=nextline, leftmargin=0pt]
+    \setlength{\parskip}{\baselineskip}
+    \addtolength{\baselineskip}{6pt}
+}{
+    \end{description}
+}
+% Publication data
 \newenvironment{pubinfo}{
+        \vfill
         \raggedright
         % No paragraph indent but space between
         \setlength{\parindent}{0pt}
         \setlength{\parskip}{\baselineskip}
-    }{\newpage}
+    }{}
 
 %% Environement for the list of publications
 \newenvironment{publications}{
