@@ -117,8 +117,8 @@
 
 %% Nomenclatures
 \RequirePackage[intoc]{nomencl}
-\renewcommand{\nomname}{List of Symbols}
-\setlength{\nomitemsep}{-\parsep}
+\setlength{\nomitemsep}{0.1ex}
+\renewcommand{\nomname}{List of symbols}
 
 %% Select default font size
 \renewcommand{\normalsize}{\fontsize{12}{15}\selectfont}
