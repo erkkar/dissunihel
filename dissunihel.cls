@@ -173,15 +173,18 @@
     }{}
 
 %% Environement for the list of publications
-\newenvironment{publications}{
-    \begin{enumerate}[
-        label=\textbf{\Roman*}, 
-        ref={\Roman*}, 
-        align=left,
-    ]
-}{
-    \end{enumerate}
+\newlist{publications}{enumerate}{1}
+\setlist[publications]{
+    label=\textbf{\Roman*}, 
+    ref={\Roman*}, 
+    align=left,
 }
+% Custom ref. labels for the publications
+\RequirePackage[capitalise,nameinlink,noabbrev,sort&compress]{cleveref}
+\crefname{publicationsi}{\textbf{Paper}}{\textbf{Papers}}
+\crefformat{publicationsi}{\textbf{Paper~#2#1#3}}
+\crefrangeformat{publicationsi}{\textbf{Papers~#3#1#4}–\textbf{#5#2#6}}
+\crefmultiformat{publicationsi}{\textbf{Papers~#2#1#3}}{ and~\textbf{#2#1#3}}{, \textbf{#2#1#3}}{ and~\textbf{#2#1#3}}
 
 %% Set default page style
 \AtBeginDocument{
