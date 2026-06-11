@@ -63,20 +63,33 @@
 \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
-        \setlength{\parindent}{0pt}
-        \setlength{\parskip}{\baselineskip}
-        \ifthenelse{\isundefined{\@pretitle}}{}{\@pretitle\par}
-        \vspace{7\baselineskip}
-        {\huge\sffamily\bfseries\@title}\par
-        \vspace{12pt}
+        \sffamily  % sans-serfi font
+        \setlength{\parindent}{0pt}  % no paragrap indents
+        % pre-title
+        \ifthenelse{\isundefined{\@pretitle}}{
+            \vspace{10\baselineskip}
+        }{
+            \@pretitle\par
+            \vspace{7\baselineskip}
+        }
+        % main title
+        {\huge\bfseries\@title\par} 
+        % subtitle
         \ifthenelse{\isundefined{\@subtitle}}{}{
-            {\large\sffamily\itshape\@subtitle\par}
+            \vspace{12pt}
+            {\large\itshape\@subtitle\par}
         }
         \vspace{3\baselineskip}
-        {\large\sffamily\@author}
+        % author name
+        {\large\@author}
         \par
         \vfill
-        \ifthenelse{\isundefined{\@posttitle}}{}{\@posttitle}
+        % post-title
+        \ifthenelse{\isundefined{\@posttitle}}{}{
+            \setlength{\parskip}{\baselineskip} % empty line between paragraphs
+            \@posttitle\par
+        }
+        \vspace{2\baselineskip}
     \end{center}
     \newpage
 }
