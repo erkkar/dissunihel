@@ -140,7 +140,7 @@
 
 %% Nomenclatures
 \RequirePackage[intoc]{nomencl}
-\setlength{\nomitemsep}{0.1ex}
+\setlength{\nomitemsep}{-0.5\parskip}  % reduce item separation by half
 \renewcommand{\nomname}{List of symbols}
 
 %% Select default font size
