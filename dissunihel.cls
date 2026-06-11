@@ -149,12 +149,19 @@
 %% Custom environments for the inner cover
 % Pre-examiners etc.
 \RequirePackage{enumitem}
-\newenvironment{people}{
-    \begin{description}[font=\bfseries, style=nextline, leftmargin=0pt]
-    \setlength{\parskip}{\baselineskip}
-    \addtolength{\baselineskip}{6pt}
-}{
-    \end{description}
+\newlist{people}{description}{1}
+\setlist[people]{
+    style=nextline, 
+    leftmargin=0pt,
+    labelindent=0pt,
+    itemindent=0pt,
+    labelsep=0pt,
+    labelwidth=!,
+    font=\bfseries, 
+    before={
+        \setlength{\parskip}{\baselineskip}
+        \addtolength{\baselineskip}{6pt}
+    }
 }
 % Publication data
 \newenvironment{pubinfo}{
