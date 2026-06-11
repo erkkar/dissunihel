@@ -14,6 +14,8 @@ To use the class for your thesis, add the line
 to the top of your LaTeX source.
 
 Available standard `book` class options are `onecolumn`, `twocolumn`, `draft` and `final`.
+Additioanally, the main language can be selected with one of following class options: 
+`british` (default), `american`, `finnish` or `swedish`.
 
 Currently only supports A4 page size with symmetric margins which will be reduced in press.
 
