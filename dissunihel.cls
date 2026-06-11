@@ -192,4 +192,7 @@
     \pagestyle{plain}
 }
 
+%% Avoid orphan and widow lines
+\RequirePackage[defaultlines=2,all]{nowidow}
+
 \endinput
