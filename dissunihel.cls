@@ -23,9 +23,20 @@
 \DeclareOption{twocolumn}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{draft}{\PassOptionsToClass{\CurrentOption}{book}}
 \DeclareOption{final}{\PassOptionsToClass{\CurrentOption}{book}}
+\DeclareOption{british}{\PassOptionsToPackage{\CurrentOption}{babel}}
+\DeclareOption{american}{\PassOptionsToPackage{\CurrentOption}{babel}}
+\DeclareOption{finnish}{\PassOptionsToPackage{\CurrentOption}{babel}}
+\DeclareOption{swedish}{\PassOptionsToPackage{\CurrentOption}{babel}}
+\ExecuteOptions{british,onecolumn}
 
 \ProcessOptions\relax
 \LoadClass[12pt,oneside]{book}
+
+\RequirePackage{babel}
+% Rename references title
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\addto\captionsfinnish{\renewcommand{\bibname}{Lähteet}}
+\addto\captionsswedish{\renewcommand{\bibname}{Källor}}
 
 %% Use Times and Helvetica fonts
 \RequirePackage{newtxtext}
