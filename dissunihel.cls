@@ -41,7 +41,7 @@
 %% Use Times and Helvetica fonts
 \RequirePackage{newtxtext}
 \RequirePackage{newtxmath}
-\RequirePackage{helvet}
+\RequirePackage[scaled=.9]{helvet}  % scale to match Times size
 \RequirePackage{ifthen}
 
 %% Set page size and margins
