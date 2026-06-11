@@ -102,11 +102,11 @@
 \titlespacing*{\chapter}{0pt}{0pt}{100pt}[0pt]
 
 % sections
-\titleformat{\section}[hang]{\Large\sffamily\bfseries}{\thesection}{1.02cm}{}{}
+\titleformat{\section}[hang]{\raggedright\Large\sffamily\bfseries}{\thesection}{1.02cm}{}{}
 \titlespacing*{\section}{0pt}{24pt}{12pt}[0pt]
 
 % subsections
-\titleformat{\subsection}[hang]{\large\sffamily\bfseries}{\thesubsection}{1.27cm}{}{}
+\titleformat{\subsection}[hang]{\raggedright\large\sffamily\bfseries}{\thesubsection}{1.27cm}{}{}
 \titlespacing*{\subsection}{0pt}{24pt}{12pt}[0pt]
 
 
